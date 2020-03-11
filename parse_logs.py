@@ -1,7 +1,9 @@
 #!/bin/python
 
-import io
-with io.open("helixlogs/20140927","r") as f:
+import io, glob, os
+for file in os.listdir("helixlogs/"):
+#for file in glob.glob("*.txt"):
+with io.open("file","r") as f:
 
 c = f.read()
 lines = c.split("\n")
