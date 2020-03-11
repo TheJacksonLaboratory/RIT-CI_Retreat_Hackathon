@@ -1,7 +1,7 @@
 #!/bin/python
 
 import io
-with io.open("20140927","r") as f:
+with io.open("helixlogs/20140927","r") as f:
 
 c = f.read()
 lines = c.split("\n")
