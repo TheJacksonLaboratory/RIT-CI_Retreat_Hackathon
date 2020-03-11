@@ -5,7 +5,8 @@ This script parses every log file in the Helix Log Directory and prints the corr
 import io, glob, os
 path = 'helixlogs/'
 for mylogfile in glob.glob(os.path.join(path, '*')):
-    print("\n", mylogfile)
+    print("\n")
+    print(mylogfile)
     with open(mylogfile, "r") as f:
         text = f.read()
         lines = text.split("\n")
