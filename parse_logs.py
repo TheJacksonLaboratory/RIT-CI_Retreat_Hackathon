@@ -1,12 +1,13 @@
 #!/bin/python
-
+'''
+This script parses every log file in the Helix Log Directory and prints the corresponding JSON
+'''
 import io, glob, os
 path = 'helixlogs/'
 for mylogfile in glob.glob(os.path.join(path, '*')):
     print("\n", mylogfile)
     with open(mylogfile, "r") as f:
         text = f.read()
-        c = f.read()
         lines = text.split("\n")
         newlist = [ l.split() for l in lines ]
         yetanothernewlist = [ mylist for mylist in newlist if mylist ]
