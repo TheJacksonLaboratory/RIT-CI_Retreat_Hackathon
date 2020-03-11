@@ -36,3 +36,17 @@ Greglog
 Grafana
 
 Facilities (Power)
+
+
+Commands:
+
+docker pull mcr.microsoft.com/azure-cli
+
+docker run -it -v/opt/prod/sregistry:/sreg mcr.microsoft.com/azure-cli
+
+
+To bind the storage from the host to the container:
+
+az login -u first.last@jax.org -p password
+
+az storage copy -r -s /source/ -d /destination
